@@ -1,0 +1,12 @@
+[
+  {
+    "productName": "Wireless Mouse",
+    "price": "$29.99",
+    "reason": "Defective item"
+  },
+  {
+    "productName": "Bluetooth Headphones",
+    "price": "$59.99",
+    "reason": "Not as described"
+  }
+]
