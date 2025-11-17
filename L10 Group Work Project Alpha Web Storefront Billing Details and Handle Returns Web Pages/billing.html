@@ -41,6 +41,24 @@
         </div>
       </div>
 
+      <div class="card p-3 mt-4">
+        <h5>Order Summary</h5>
+
+        <div class="mb-2">
+          <label class="form-label">Subtotal ($)</label>
+          <input type="number" class="form-control" ng-model="billing.subtotal" placeholder="Enter subtotal">
+        </div>
+
+        <button type="button" class="btn btn-secondary w-100 mb-2" ng-click="calculateTotal()">
+          Calculate Total with Tax
+        </button>
+
+        <div ng-if="billing.total">
+          <p><strong>Tax (6%):</strong> ${{ billing.tax | number:2 }}</p>
+          <p><strong>Total:</strong> ${{ billing.total | number:2 }}</p>
+        </div>
+      </div>
+
       <div class="mt-4">
         <button type="submit" class="btn btn-primary w-100">Submit Billing</button>
       </div>
@@ -55,3 +73,4 @@
   <script src="js/billing.js"></script>
 </body>
 </html>
+
