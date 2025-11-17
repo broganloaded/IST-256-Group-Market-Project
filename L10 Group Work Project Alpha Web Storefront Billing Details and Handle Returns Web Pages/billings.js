@@ -4,6 +4,26 @@ app.controller('BillingController', function($scope, $http) {
   $scope.billing = {};
   $scope.submitted = false;
 
+  //default shipping address
+  $scope.shippingAddress = "123 Example St, Philadelphia, PA 19104";
+
+  $scope.copyShipping = function () {
+    if ($scope.billing.sameAsShipping) {
+      $scope.billing.address = $scope.shippingAddress;
+    } else {
+      $scope.billing.address = "";
+    }
+  };
+
+  $scope.calculateTotal = function () {
+      if ($scope.billing.subtotal) {
+          const taxRate = 0.06; // 6% example
+          $scope.billing.tax = $scope.billing.subtotal * taxRate;
+          $scope.billing.total = parseFloat($scope.billing.subtotal) + $scope.billing.tax;
+      }
+  };
+
+  
   $scope.submitBilling = function() {
     if (validateBilling($scope.billing)) {
       $http.post('/api/billing', $scope.billing)
@@ -30,3 +50,4 @@ function validateBilling(data) {
     cvvRegex.test(data.cvv)
   );
 }
+
