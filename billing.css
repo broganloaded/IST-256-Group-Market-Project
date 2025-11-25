@@ -1,0 +1,54 @@
+body {
+    background: #f7f9fc;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.header {
+    text-align: center;
+    padding: 25px;
+    background: linear-gradient(90deg, #004aad, #0073ff);
+    color: white;
+}
+
+.header h1 {
+    margin-bottom: 5px;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.team {
+    font-size: 16px;
+    opacity: 0.9;
+    margin-bottom: 0;
+}
+
+.card {
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    background: white;
+}
+
+.section-title {
+    font-size: 26px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #004aad;
+}
+
+label {
+    font-weight: 600;
+}
+
+button {
+    font-size: 18px;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.footer {
+    text-align: center;
+    padding: 15px;
+    background: #e6e6e6;
+    color: #333;
+    font-size: 14px;
+}
